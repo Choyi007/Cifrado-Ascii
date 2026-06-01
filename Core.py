@@ -44,9 +44,9 @@ Data, Success = LoadJson(DataRute, {})
 if not Success:
     Data = {}
 
-Logs, Success2 = LoadJson(LogsRute, [])
-if not Success2:
-    Logs = []
+#Logs, Success2 = LoadJson(LogsRute, [])
+#if not Success2:
+#    Logs = []
 
 DcrD, Success3 = WaitForDisk(USBdRute, {}, "r", None)
 if not Success3:
