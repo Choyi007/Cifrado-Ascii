@@ -1,42 +1,42 @@
-    import json
-    import Levenshtein
-    import os
-    import time
-    import subprocess
-    import pyperclip
+import json
+import Levenshtein
+import os
+import time
+import subprocess
+import pyperclip
 
-    import ctypes
+import ctypes
 
-    ctypes.windll.kernel32.SetConsoleTitleW(
-        "DataVault v1.0 - Secure Data Manager"
-    )
+ctypes.windll.kernel32.SetConsoleTitleW(
+    "DataVault v1.0 - Secure Data Manager"
+)
 
-    ErrorCode = {
-        200:"ok",
-        201:"Manipulado",
-        404:"No existe",
-        405:"Error de Formato"
-        }
+ErrorCode = {
+    200:"ok",
+    201:"Manipulado",
+    404:"No existe",
+    405:"Error de Formato"
+    }
 
-    #Internal Library
-    from Cipher import Encripter, Decripter
-    from Cipher import SelfTest as CipherST
-    from UserInteractions import ConfirmationMessage, ImportantQuestion
-    from JsonModule import CreateJson,WaitForDisk,LoadJson,SaveData
-    from TimeStapModule import safe_ctime
+#Internal Library
+from Cipher import Encripter, Decripter
+from Cipher import SelfTest as CipherST
+from UserInteractions import ConfirmationMessage, ImportantQuestion
+from JsonModule import CreateJson,WaitForDisk,LoadJson,SaveData
+from TimeStapModule import safe_ctime
 
-    #External Library
-    from colorama import init, Fore, Back, Style
+#External Library
+from colorama import init, Fore, Back, Style
 
-    CipherST()
+CipherST()
 
-    init(autoreset=True,strip=True)
+init(autoreset=True,strip=True)
 
-    CompleteDR =r"C:\Users\igoli\Documents\Documentos\Datos_OlivoVazquezIsaíasGuillermo.json"
-    CompleteLR = r"C:\Users\igoli\Documents\Documentos\Logs_Data.json"
-    DataRute = r"Datos_OlivoVazquezIsaíasGuillermo.json"
-    LogsRute = r"Logs_Data.json"
-    USBdRute = r"D:\DataVault\config.json"
+CompleteDR =r"C:\Users\igoli\Documents\Documentos\Datos_OlivoVazquezIsaíasGuillermo.json"
+CompleteLR = r"C:\Users\igoli\Documents\Documentos\Logs_Data.json"
+DataRute = r"Datos_OlivoVazquezIsaíasGuillermo.json"
+LogsRute = r"Logs_Data.json"
+USBdRute = r"D:\DataVault\config.json"
 
 
 
